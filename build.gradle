@@ -1,0 +1,39 @@
+plugins {
+    id 'groovy'
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+    id("com.google.protobuf") version "0.9.4"
+}
+
+group = 'ru.miku.ktor-extension'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+}
+
+gradlePlugin {
+    plugins {
+        extension {
+            id = 'ru.miku.ktor-extension'
+            implementationClass = 'ru.miku.annotation.serialization.plugin.AnnotationPlugin'
+        }
+    }
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+task injectSerialization {
+    group = 'proto-utils'
+    dependsOn generateProto
+}

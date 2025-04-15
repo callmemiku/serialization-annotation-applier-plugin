@@ -29,7 +29,7 @@ gradlePlugin {
             id = 'ru.miku.ktor-extension'
             displayName = /miku's proto ktor helper/
             description = "adds serializable prop to data classes and tries to apply serialize with using your implementation"
-            tags = ['gradle', 'plugin']
+            tags = ['ktor', 'kotlinx', 'serialization', 'support']
             implementationClass = 'ru.miku.annotation.serialization.plugin.AnnotationPlugin'
         }
     }

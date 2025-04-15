@@ -28,6 +28,10 @@ gradlePlugin {
     }
 }
 
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-compiler-embeddable:1.9.21"
+}
+
 java {
     withJavadocJar()
     withSourcesJar()

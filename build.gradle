@@ -6,7 +6,7 @@ plugins {
     id("com.gradle.plugin-publish") version "1.3.1"
 }
 
-group = 'ru.miku.ktor-extension'
+group = 'io.github.callmemiku'
 version = '1.0.0'
 
 repositories {
@@ -26,7 +26,7 @@ gradlePlugin {
     vcsUrl = 'https://github.com/callmemiku/serialization-annotation-applier-plugin.git'
     plugins {
         extension {
-            id = 'ru.miku.ktor-extension'
+            id = 'io.github.callmemiku.ktor-extension'
             displayName = /miku's proto ktor helper/
             description = "adds serializable prop to data classes and tries to apply serialize with using your implementation"
             tags = ['ktor', 'kotlinx', 'serialization', 'support']
